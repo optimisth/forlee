@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>List:</strong>
+  <%= @bulletin.list_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bulletin.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bulletin.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_list_bulletin_path(@list, @bulletin) %> |
+<%= link_to 'Back', admin_list_bulletins_path %>
