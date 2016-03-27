@@ -4,6 +4,7 @@ html, body, #wrapper {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-family: 'Questrial', sans-serif;
 }
 
 #wrapper td {
@@ -12,10 +13,29 @@ html, body, #wrapper {
 }
 
 .pink {
-	background-color: rgb(181, 148, 0);
+	background-color: rgb(249, 220, 233);
+}
+
+.white {
+	background-color: white;
 }
 
 .logo {
 	width: 433px;
 	height: 25px;
+}
+
+.choose-container, .choose {
+	color: rgba(0, 0, 0, 0.9);
+	font-size: 25px;
+}
+
+.choose {
+	text-decoration: none;
+	margin: 0 38px;
+}
+
+.choose:hover {
+	text-decoration: none;
+	color: rgb(181, 148, 0);
 }
