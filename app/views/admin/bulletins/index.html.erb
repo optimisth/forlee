@@ -14,7 +14,7 @@
   <tbody>
     <% @bulletins.each do |bulletin| %>
       <tr>
-        <td><%= bulletin.title %></td>
+        <td><%= link_to bulletin.title, admin_list_bulletin_posts_path(@list, bulletin) %></td>
         <td><%= bulletin.description %></td>
         <td><%= link_to 'Show', admin_list_bulletin_path(@list, bulletin) %></td>
         <td><%= link_to 'Edit', edit_admin_list_bulletin_path(@list, bulletin) %></td>

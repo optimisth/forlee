@@ -58,3 +58,57 @@ ul {
 .bulletin_title a:active{
 	color: rgba(0,0,0,0.9);
 }
+
+.column {
+	width: 48%;
+	padding-right: 10px;
+	float:left;
+}
+
+.column figure {
+	width: 100%;
+	margin: 0 0 11px 0;
+	display: inline-block;
+	background: #f9dce9;
+}
+
+.column figure img {
+	width: 100%;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.column figure img:hover {
+	opacity: .3;
+}
+
+.post img {
+	width: 100%;
+}
+
+
+.post_detail {
+	padding: 40px 20px;
+	color: rgba(0, 0, 0, 0.6)
+}
+
+.post_detail_title {
+
+}
+
+.post_detail_desc {
+	margin-top: 5px;
+}
+
+.post_detail_content {
+	margin-top: 40px;
+}
+
+a:hover {
+	color: rgb(181, 148, 0);
+}
+
+a:active {
+	color: black;
+}

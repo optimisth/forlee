@@ -1,0 +1,22 @@
+<div class='column'>
+	<% @pictures.each_with_index do |picture, index| %>
+		<% if index % 2 == 0 %>
+			<a href='<%=home_post_path(picture.post_id)%>'>
+				<figure>
+				<%= image_tag(picture.avatar_url) %>
+				</figure>
+			</a>
+		<% end %>
+	<% end %>
+</div>
+<div class='column'>
+	<% @pictures.each_with_index do |picture, index| %>
+		<% if index % 2 == 1 %>
+		<a href='<%=home_post_path(picture.post_id)%>'>
+			<figure>
+			<%= image_tag(picture.avatar_url) %>
+			</figure>
+		</a>
+		<% end %>
+	<% end %>
+</div>

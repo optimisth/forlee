@@ -16,7 +16,7 @@
         <li class='list_title'><%= list.title %></li>
         <ul>
           <% list.bulletins.each do |bulletin| %>
-            <li class='bulletin_title'><%= link_to bulletin.title, nil %></li>
+            <li class='bulletin_title'><%= link_to bulletin.title, home_bulletin_path(bulletin.title) %></li>
           <% end %>
         </ul>
       <% end %>
@@ -26,6 +26,6 @@
   <div class='section'>
     <%= yield %>
   </div>
-  
+
 </body>
 </html>
