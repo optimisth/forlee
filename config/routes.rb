@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
+  root 'welcome#index'
+
+  get 'welcome/choose'
+
+  get 'welcome/about'
+
+  get 'home/index'
 
   namespace :admin do
     resources :lists do
