@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forlee</title>
+  <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <div class='navigation'>
+    <%= link_to image_tag('logo.png', class: 'logo'), home_index_path %>
+
+    <ul class='navigation-ul'>
+      <% List.all.each do |list| %>
+        <li class='list_title'><%= list.title %></li>
+        <ul>
+          <% list.bulletins.each do |bulletin| %>
+            <li class='bulletin_title'><%= link_to bulletin.title, nil %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='section'>
+    <%= yield %>
+  </div>
+  
+</body>
+</html>

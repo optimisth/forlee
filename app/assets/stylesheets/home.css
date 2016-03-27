@@ -1,0 +1,60 @@
+html, body, #wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Questrial', sans-serif;
+}
+
+.navigation {
+    width: 410px;
+    height: 100%;
+    position: fixed;
+		padding: 70px 66px 0 90px;
+}
+
+.section {
+    width: 716px;
+    height: auto;
+    position: absolute;
+    margin-left: 410px;
+		margin-top: 70px;
+}
+
+.logo {
+	height: 15px;
+}
+
+.navigation-ul {
+	width: 254px;
+	margin-top: 70px;
+	padding: 0;
+}
+
+ul {
+	padding: 0 0 52px 0;
+}
+
+.list_title {
+	list-style: none;
+	font-size: 22px;
+	text-decoration: none;
+	color: rgba(0,0,0,0.9);
+	margin-bottom: 15px;
+}
+
+.bulletin_title {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.bulletin_title a {
+	font-size: 17px;
+	text-decoration: none;
+	color: rgba(0,0,0,0.6);
+}
+
+.bulletin_title a:active{
+	color: rgba(0,0,0,0.9);
+}
