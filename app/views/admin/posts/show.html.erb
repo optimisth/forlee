@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<% @post_attachments.each do |p| %>
+  <%= image_tag p.avatar_url %>
+  <%= link_to "Edit Attachment", edit_admin_post_attachment_path(p) %>
+<% end %>
+
+<%= link_to 'Edit', edit_admin_list_bulletin_post_path(@list, @bulletin, @post) %> |
+<%= link_to 'Back', admin_list_bulletin_posts_path %>

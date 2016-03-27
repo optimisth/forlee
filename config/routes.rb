@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+
   root 'home#index'
 
   namespace :admin do
     resources :lists do
-        resources :bulletins
+        resources :bulletins do
+          resources :posts
+        end
     end
+    resources :post_attachments
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
