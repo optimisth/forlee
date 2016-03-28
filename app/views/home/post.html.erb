@@ -1,11 +1,13 @@
 <div class='post'>
-	<%= image_tag @post.picture %>
+	<% @pictures.each do |p| %>
+		<%= image_tag p.avatar_url %>
+	<% end %>
 	<div class='post_detail'>
 		<div class='post_detail_title'>
 			<%= @post.title %>
 		</div>
 		<div class='post_detail_desc'>
-			<%= @post.desc %>
+			<%= @post.description %>
 		</div>
 		<div class='post_detail_content'>
 			<%= simple_format(@post.content) %>

@@ -12,6 +12,7 @@ class HomeController < ApplicationController
 
   def post
     @post = Post.find(params[:id])
+    @pictures = @post.post_attachments
   end
 
   def index
