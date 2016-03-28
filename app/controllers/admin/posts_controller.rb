@@ -15,12 +15,14 @@ class Admin::PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post_attachments  = @post.post_attachments.all
+    @videos = @post.videos.all
   end
 
   # GET /posts/new
   def new
     @post = @bulletin.posts.new
     @post_attachment = @post.post_attachments.build
+    3.times { @post.videos.build }
   end
 
   # GET /posts/1/edit
@@ -34,8 +36,10 @@ class Admin::PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        params[:post_attachments]['avatar'].each do |a|
-          @post_attachment = @post.post_attachments.create!(:avatar => a)
+        unless params[:post_attachments].blank?
+          params[:post_attachments]['avatar'].each do |a|
+            @post_attachment = @post.post_attachments.create!(:avatar => a)
+          end
         end
         format.html { redirect_to [:admin, @list, @bulletin, @post], notice: 'Post was successfully created.' }
       else

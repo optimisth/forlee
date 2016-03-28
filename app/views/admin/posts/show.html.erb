@@ -15,10 +15,20 @@
   <%= @post.content %>
 </p>
 
+<p>
+  <strong>Pictures:</strong>
 <% @post_attachments.each do |p| %>
   <%= image_tag p.avatar_url %>
   <%= link_to "Edit Attachment", edit_admin_post_attachment_path(p) %>
 <% end %>
+</p>
+
+<p>
+  <strong>Videos:</strong>
+  <% @post.videos do |v| %>
+    <%= v.video_url %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_admin_list_bulletin_post_path(@list, @bulletin, @post) %> |
 <%= link_to 'Back', admin_list_bulletin_posts_path %>

@@ -28,11 +28,9 @@ class Admin::PostAttachmentsController < ApplicationController
 
     respond_to do |format|
       if @post_attachment.save
-        format.html { redirect_to @post_attachment, notice: 'Post attachment was successfully created.' }
-        format.json { render :show, status: :created, location: @post_attachment }
+        format.html { redirect_to admin_post_attachment_path(@post_attachment), notice: 'Post attachment was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @post_attachment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +52,7 @@ class Admin::PostAttachmentsController < ApplicationController
   def destroy
     @post_attachment.destroy
     respond_to do |format|
-      format.html { redirect_to post_attachments_url, notice: 'Post attachment was successfully destroyed.' }
+      format.html { redirect_to admin_post_attachments_url, notice: 'Post attachment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
