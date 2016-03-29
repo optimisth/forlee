@@ -2,6 +2,12 @@
 	<% @pictures.each do |p| %>
 		<%= image_tag p.avatar_url %>
 	<% end %>
+
+	<% @videos.each do |v| %>
+		<iframe width="800" height="450" src="<%= v.video_url %>" frameborder="0" allowfullscreen></iframe>
+		<div style='height:11px;'></div>
+	<% end %>
+
 	<div class='post_detail'>
 		<div class='post_detail_title'>
 			<%= @post.title %>

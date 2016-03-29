@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/list/:title' => 'home#list', :as => 'home_list'
   get 'home/bulletin/:title' => 'home#bulletin', :as => 'home_bulletin'
   get 'home/post/:id' => 'home#post', :as => 'home_post'
   get 'home/index'

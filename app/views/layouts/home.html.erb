@@ -13,7 +13,7 @@
 
     <ul class='navigation-ul'>
       <% List.all.each do |list| %>
-        <li class='list_title'><%= list.title %></li>
+        <li class='list_title'><%= link_to list.title, home_list_path(list.title) %></li>
         <ul>
           <% list.bulletins.each do |bulletin| %>
             <li class='bulletin_title'><%= link_to bulletin.title, home_bulletin_path(bulletin.title) %></li>
@@ -25,6 +25,10 @@
 
   <div class='section'>
     <%= yield %>
+
+    <div class='footer'>
+      All rights reserved © LEEHAEYOUNG
+    </div>
   </div>
 
 </body>

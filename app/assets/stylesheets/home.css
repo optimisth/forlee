@@ -15,7 +15,7 @@ html, body, #wrapper {
 }
 
 .section {
-    width: 716px;
+    width: 1000px;
     height: auto;
     position: absolute;
     margin-left: 410px;
@@ -36,11 +36,11 @@ ul {
 	padding: 0 0 52px 0;
 }
 
-.list_title {
+.list_title, .list_title a{
 	list-style: none;
-	font-size: 22px;
+	font-size: 20px;
 	text-decoration: none;
-	color: rgba(0,0,0,0.9);
+	color: rgba(0,0,0,0.6);
 	margin-bottom: 15px;
 }
 
@@ -50,7 +50,7 @@ ul {
 }
 
 .bulletin_title a {
-	font-size: 17px;
+	font-size: 16px;
 	text-decoration: none;
 	color: rgba(0,0,0,0.6);
 }
@@ -60,9 +60,10 @@ ul {
 }
 
 .column {
-	width: 48%;
+	width: 32%;
 	padding-right: 10px;
-	float:left;
+	display: inline-block;
+	min-height: 720px;
 }
 
 .column figure {
@@ -85,6 +86,7 @@ ul {
 
 .post img {
 	width: 100%;
+	margin-bottom: 11px;
 }
 
 
@@ -94,15 +96,18 @@ ul {
 }
 
 .post_detail_title {
-
+	font-size: 20px;
 }
 
 .post_detail_desc {
-	margin-top: 5px;
+	margin-top: 8px;
+	font-size: 16px;
 }
 
 .post_detail_content {
-	margin-top: 40px;
+	margin-top: 32px;
+	font-size: 18px;
+	line-height: 26px;
 }
 
 a:hover {
@@ -111,4 +116,11 @@ a:hover {
 
 a:active {
 	color: black;
+}
+
+.footer  {
+	color: rgb(181, 148, 0);
+	margin: 60px 0 80px 0;
+	text-align: center;
+	font-size: 12px;
 }
