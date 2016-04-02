@@ -1,6 +1,8 @@
 class Admin::VideosController < ApplicationController
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
+  layout 'admin'
+
   # GET /videos
   # GET /videos.json
   def index

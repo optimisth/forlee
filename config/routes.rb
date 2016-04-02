@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'welcome/about'
   get 'home/index'
 
+
+  get 'admin' => 'admin/lists#index'
   namespace :admin do
     resources :lists do
         resources :bulletins do
