@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @video %> |
-<%= link_to 'Back', admin_videos_path %>
+<%= link_to 'Show', [:admin, @list, @bulletin, @post, @video] %> |
+<%= link_to 'Back', admin_list_bulletin_post_videos_path %>

@@ -14,11 +14,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :lists do
         resources :bulletins do
-          resources :posts
+          resources :posts do
+            resources :videos
+          end
         end
     end
     resources :post_attachments
-    resources :videos
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
