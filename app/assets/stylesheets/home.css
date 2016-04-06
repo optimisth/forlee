@@ -110,11 +110,24 @@ ul {
 	color: rgba(0,0,0,0.9);
 }
 
+.columns-wrap {
+  clear: left;
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 33.3%;
+  font-size: 0px;
+}
+
 .column {
 	width: 32%;
 	padding-right: 10px;
 	float: left;
 	min-height: 720px;
+  position: relative;
+  overflow: hidden;
+  left: 100%;
+  font-size: 0px;
 }
 
 .column figure {
