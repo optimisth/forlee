@@ -111,6 +111,12 @@ ul {
 	color: rgba(0,0,0,0.9);
 }
 
+.columns-wrap-first {
+  float: left;
+  width: 100%;
+  font-size: 0px;
+}
+
 .columns-wrap {
   clear: left;
   float: left;
@@ -127,7 +133,7 @@ ul {
 	min-height: 720px;
   position: relative;
   overflow: hidden;
-  left: 100%;
+  left: 66.6%;
   font-size: 0px;
 }
 
