@@ -58,7 +58,6 @@ html, body, #wrapper {
 }
 
 .navigation {
-    width: 410px;
     height: 100%;
     position: fixed;
 		padding: 70px 66px 0 90px;
