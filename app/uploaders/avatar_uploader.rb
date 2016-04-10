@@ -1,8 +1,6 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-
   after :remove, :delete_empty_upstream_dirs
 
   # Include RMagick or MiniMagick support:
@@ -28,10 +26,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   def extension_white_list
     %w(jpg jpeg gif png pdf)
-  end
-
-  version :thumb do
-    process resize_to_fit: [300, nil]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
