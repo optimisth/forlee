@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
-  include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   after :remove, :delete_empty_upstream_dirs
 
