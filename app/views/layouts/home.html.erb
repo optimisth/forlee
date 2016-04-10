@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>Forlee</title>
+  <%= favicon_link_tag 'lhy-favicon.ico' %>
   <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 </head>
@@ -13,10 +15,10 @@
 
     <ul class='navigation-ul'>
       <% List.all.each do |list| %>
-        <li class='list_title'><%= link_to list.title, home_list_path(list.title) %></li>
+        <li class='list_title' id="l<%=list.id%>"><%= link_to list.title, home_list_path(list.title) %></li>
         <ul>
           <% list.bulletins.each do |bulletin| %>
-            <li class='bulletin_title'><%= link_to bulletin.title, home_bulletin_path(bulletin.title) %></li>
+            <li class='bulletin_title' id="b<%=bulletin.id%>"><%= link_to bulletin.title, home_bulletin_path(bulletin.title) %></li>
           <% end %>
         </ul>
       <% end %>

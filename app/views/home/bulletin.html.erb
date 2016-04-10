@@ -43,3 +43,10 @@
 		</div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function () {
+	var selected_menu = $("#b<%= @bulletin.id %>");
+	selected_menu.addClass('nav-active');
+})
+</script>

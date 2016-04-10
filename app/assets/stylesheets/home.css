@@ -110,6 +110,10 @@ ul {
 	color: rgba(0,0,0,0.9);
 }
 
+.nav-active a {
+  color: rgba(0,0,0,0.9);
+}
+
 .columns-wrap-first {
   float: left;
   width: 100%;

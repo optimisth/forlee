@@ -19,7 +19,7 @@
   <strong>Pictures:</strong>
 <% @post_attachments.each do |p| %>
   <%= image_tag p.avatar_url %>
-  <%= link_to "Edit Attachment", edit_admin_post_attachment_path(p) %>
+  <%= link_to "Destroy This Post Attachment", admin_post_attachment_path(p), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 </p>
 
