@@ -21,12 +21,12 @@ html, body, #wrapper {
 }
 
 .logo {
-	height: 25px;
+	height: 18px;
 }
 
 .choose-container, .choose {
 	color: rgb(25, 25, 25);
-	font-size: 25px;
+	font-size: 18px;
 }
 
 .choose {
@@ -65,7 +65,7 @@ html, body, #wrapper {
 	width: 660px;
 	height: 320px;
 	white-space: pre-line;
-	margin-top: 170px;
+	margin-top: 100px;
 	margin-left: 90px;
 	font-size: 15px;
 	line-height: 23px;
