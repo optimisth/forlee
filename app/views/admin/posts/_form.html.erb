@@ -16,12 +16,24 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :title_kr %><br>
+    <%= f.text_field :title_kr %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
+    <%= f.label :description_kr %><br>
+    <%= f.text_field :description_kr %>
+  </div>
+  <div class="field">
     <%= f.label :content %><br>
     <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :content_kr %><br>
+    <%= f.text_area :content_kr %>
   </div>
   <%= f.fields_for :post_attachments do |p| %>
     <div class="field">

@@ -164,25 +164,57 @@ ul {
 	margin-bottom: 11px;
 }
 
+.post {
+  min-height: 720px;
+}
 
 .post_detail {
 	padding: 40px 20px;
 	color: rgba(0, 0, 0, 0.6)
 }
 
+.post_detail_titles {
+  line-height: 20px;
+  height: 20px;
+}
+
 .post_detail_title {
 	font-size: 20px;
+  display: inline-block;
+}
+
+.post_detail_title_kr {
+	font-size: 18px;
+  display: inline-block;
+}
+
+.post_detail_descs {
+	margin-top: 8px;
+  line-height: 13px;
 }
 
 .post_detail_desc {
-	margin-top: 8px;
 	font-size: 13px;
+  display: inline-block;
+}
+
+.post_detail_desc_kr {
+	font-size: 12px;
+  display: inline-block;
+}
+
+.post_detail_contents {
+	margin-top: 32px;
 }
 
 .post_detail_content {
-	margin-top: 32px;
 	font-size: 16px;
 	line-height: 28px;
+}
+
+.post_detail_content_kr {
+	font-size: 12px;
+	line-height: 24px;
 }
 
 a:hover {
