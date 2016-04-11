@@ -9,7 +9,23 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class='navigation'>
+    <%= link_to image_tag('logo.png', class: 'logo'), admin_path %>
 
+    <ul class='navigation-ul'>
+      <% List.all.each do |list| %>
+        <li class='list_title' id="l<%=list.id%>"><%= link_to list.title, admin_list_bulletins_path(list.id) %></li>
+        <ul>
+          <% list.bulletins.each do |bulletin| %>
+            <li class='bulletin_title' id="b<%=bulletin.id%>"><%= link_to bulletin.title, admin_list_bulletin_posts_path(list.id, bulletin.id) %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='section'>
+    <%= yield %>
+  </div>
 </body>
 </html>
