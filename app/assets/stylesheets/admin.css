@@ -10,3 +10,13 @@ html, body, #wrapper {
 body {
 	padding-left: 60px;
 }
+
+input {
+  width: 600px;
+  height: 20px;
+}
+
+textarea {
+  width: 600px;
+  height: 250px;
+}
