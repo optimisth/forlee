@@ -70,3 +70,13 @@ html, body, #wrapper {
 	font-size: 15px;
 	line-height: 23px;
 }
+
+.about-image {
+	position: absolute;
+	top: 75px;
+	left: 830px;
+}
+
+.about-image img {
+	width: 400px;
+}
