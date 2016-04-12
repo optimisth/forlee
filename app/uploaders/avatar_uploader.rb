@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
-  include CarrierWave::RMagick
+  #include CarrierWave::RMagick
 
   after :remove, :delete_empty_upstream_dirs
 
@@ -30,9 +30,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png pdf)
   end
 
-  version :thumb do
-    process resize_to_fill: [320, nil]
-  end
+  #version :thumb do
+  #  process resize_to_fill: [320, nil]
+  #end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
