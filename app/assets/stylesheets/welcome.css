@@ -67,8 +67,10 @@ html, body, #wrapper {
 	white-space: pre-line;
 	margin-top: 100px;
 	margin-left: 90px;
-	font-size: 15px;
-	line-height: 23px;
+	font-size: 14px;
+	line-height: 26px;
+	word-break: keep-all;
+	word-wrap: break-word;
 }
 
 .about-image {
