@@ -7,7 +7,7 @@
 				<% if index % 3 == 0 %>
 				<a href='<%=home_post_path(post)%>'>
 					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url) %>
+						<%= image_tag('thumb_'+post.post_attachments.first.avatar_url) %>
 					</figure>
 				</a>
 				<% end %>
@@ -20,7 +20,7 @@
 				<% if index % 3 == 1 %>
 				<a href='<%=home_post_path(post)%>'>
 					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url) %>
+						<%= image_tag('thumb_'+post.post_attachments.first.avatar_url) %>
 					</figure>
 				</a>
 				<% end %>
@@ -33,7 +33,7 @@
 				<% if index % 3 == 2 %>
 				<a href='<%=home_post_path(post)%>'>
 					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url) %>
+						<%= image_tag('thumb_'+post.post_attachments.first.avatar_url) %>
 					</figure>
 				</a>
 				<% end %>
@@ -43,10 +43,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-$(document).ready(function () {
-	var selected_menu = $("#b<%= @bulletin.id %>");
-	selected_menu.addClass('nav-active');
-})
-</script>
