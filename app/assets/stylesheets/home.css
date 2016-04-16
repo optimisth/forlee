@@ -58,6 +58,10 @@ html, body, #wrapper {
   overflow-y: hidden;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .navigation {
     height: 100%;
 		padding: 70px 66px 0 90px;
