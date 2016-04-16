@@ -8,5 +8,6 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    @about = About.order('created_at DESC').first
   end
 end

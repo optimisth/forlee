@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong><br>
+  <%= @about.content %>
+</p>
+
+<p>
+  <strong>Avatar:</strong><br>
+  <%= image_tag @about.avatar_url %>
+</p>
+
+<%= link_to 'Edit', edit_admin_about_path(@about) %> |
+<%= link_to 'Back', admin_abouts_path %>

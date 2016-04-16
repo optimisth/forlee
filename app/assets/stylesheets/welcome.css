@@ -82,3 +82,7 @@ html, body, #wrapper {
 .about-image img {
 	width: 400px;
 }
+
+p {
+	margin: 0;
+}

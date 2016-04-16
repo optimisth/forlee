@@ -77,3 +77,7 @@ ul {
 .nav-active a {
   color: rgba(0,0,0,0.9);
 }
+
+img {
+  width: 300px;
+}

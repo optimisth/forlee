@@ -55,6 +55,12 @@ class Admin::PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+
+          unless params[:post_attachments].blank?
+            params[:post_attachments]['avatar'].each do |a|
+              @post_attachment = @post.post_attachments.create!(:avatar => a)
+          end
+        end
         format.html { redirect_to [:admin, @list, @bulletin, @post], notice: 'Post was successfully updated.' }
       else
         format.html { render :edit }
