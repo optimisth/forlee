@@ -1,52 +1,31 @@
-<div class='columns-wrap-first'>
-	<div class='columns-wrap'>
-		<div class='columns-wrap'>
-			<div class='column'>
-				<% @posts.each_with_index do |post, index| %>
-				<% unless post.post_attachments.blank? %>
-				<% if index % 3 == 0 %>
+<div class="grid">
+  <div class="grid-sizer"></div>
+	<% @posts.each_with_index do |post, index| %>
+		<% unless post.post_attachments.blank? %>
+			<div class="grid-item">
 				<a href='<%=home_post_path(post)%>'>
 					<figure>
 						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
 					</figure>
 				</a>
-				<% end %>
-				<% end %>
-				<% end %>
 			</div>
-			<div class='column'>
-				<% @posts.each_with_index do |post, index| %>
-				<% unless post.post_attachments.blank? %>
-				<% if index % 3 == 1 %>
-				<a href='<%=home_post_path(post)%>'>
-					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
-					</figure>
-				</a>
-				<% end %>
-				<% end %>
-				<% end %>
-			</div>
-			<div class='column'>
-				<% @posts.each_with_index do |post, index| %>
-				<% unless post.post_attachments.blank? %>
-				<% if index % 3 == 2 %>
-				<a href='<%=home_post_path(post)%>'>
-					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
-					</figure>
-				</a>
-				<% end %>
-				<% end %>
-				<% end %>
-			</div>
-		</div>
-	</div>
+		<% end %>
+	<% end %>
 </div>
 
 <script>
 $(document).ready(function () {
 	var selected_menu = $("#<%= @selected %>");
 	selected_menu.addClass('nav-active');
+
+	var $grid = $('.grid').masonry({
+	  itemSelector: '.grid-item',
+	  percentPosition: true,
+	  columnWidth: '.grid-sizer'
+	});
+
+	$grid.masonry();
+
+
 })
 </script>

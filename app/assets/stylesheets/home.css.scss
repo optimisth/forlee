@@ -1,11 +1,6 @@
 /*
 *= require 'masonry/basic'
-*= require 'masonry/centered'
-*= require 'masonry/fluid'
 *= require 'masonry/gutters'
-*= require 'masonry/infinitescroll'
-*= require 'masonry/right-to-left'
-*= require 'masonry/transitions'
 */
 
 @font-face {
@@ -129,54 +124,6 @@ ul {
   color: rgba(0,0,0,0.9);
 }
 
-.columns-wrap-first {
-  float: left;
-  width: 100%;
-  font-size: 0px;
-}
-
-.columns-wrap {
-  clear: left;
-  float: left;
-  width: 100%;
-  position: relative;
-  right: 33.3%;
-  font-size: 0px;
-}
-
-.column {
-	width: 32%;
-	padding-right: 5px;
-	float: left;
-	min-height: 720px;
-  position: relative;
-  overflow: hidden;
-  left: 66.6%;
-  font-size: 0px;
-}
-
-.column figure {
-	width: 100%;
-	margin: 0 0 5px 0;
-	display: inline-block;
-  background: pink;
-	/*background: #f9dce9;*/
-	font-size: 0px;
-}
-
-.column figure img {
-	width: 100%;
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.column figure img:hover {
-	opacity: .3;
-  -webkit-filter: brightness(2) contrast(2) grayscale(100%); /* Chrome, Safari, Opera */
-  filter: brightness(2) contrast(2) grayscale(100%);
-}
-
 .post img {
 	width: 100%;
 	margin-bottom: 11px;
@@ -254,6 +201,53 @@ a:active {
 	color: rgb(181, 148, 0);
 	text-align: center;
 	font-size: 12px;
-  margin-bottom: 80px;
+  padding-top: 80px;
   padding-bottom: 80px;
+}
+* { box-sizing: border-box; }
+
+/* ---- grid ---- */
+
+.grid {
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+  padding: 0 5px 5px 0;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item figure {
+  width: 100%;
+  margin: 0 0 5px 0;
+  display: inline-block;
+  background: pink;
+  /*background: #f9dce9;*/
+  font-size: 0px;
+}
+
+.grid-item figure img {
+	width: 100%;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.grid-item figure img:hover {
+	opacity: .3;
+  -webkit-filter: brightness(2) contrast(2) grayscale(100%); /* Chrome, Safari, Opera */
+  filter: brightness(2) contrast(2) grayscale(100%);
 }
