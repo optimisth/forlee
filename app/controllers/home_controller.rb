@@ -11,6 +11,8 @@ class HomeController < ApplicationController
       post_ids.push(b_post_ids)
     end
     @posts = Post.where(id: post_ids)
+
+    render 'index'
   end
 
   def bulletin
@@ -19,6 +21,8 @@ class HomeController < ApplicationController
     @posts = @bulletin.posts
     post_ids = @posts.map(&:id)
     @pictures = PostAttachment.where(post_id: post_ids)
+
+    render 'index'
   end
 
   def post

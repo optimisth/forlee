@@ -22,7 +22,7 @@ textarea {
 .navigation {
     height: 100%;
     position: fixed;
-		padding: 70px 66px 0 90px;
+		padding: 70px 0 0 90px;
     z-index: 100;
 }
 

@@ -62,11 +62,11 @@ html, body, #wrapper {
 }
 
 .about-text {
-	width: 660px;
+	width: 570px;
 	height: 320px;
 	white-space: pre-line;
-	margin-top: 100px;
-	margin-left: 90px;
+	margin-top: 40px;
+	margin-left: 580px;
 	font-size: 14px;
 	line-height: 26px;
 	word-break: keep-all;
@@ -75,12 +75,19 @@ html, body, #wrapper {
 
 .about-image {
 	position: absolute;
-	top: 75px;
-	left: 830px;
+	top: 150px;
+	left: 90px;
 }
 
 .about-image img {
 	width: 400px;
+}
+
+.insta-logo {
+	width: 25px;
+	position: absolute;
+	top: 60px;
+	left: 1050px;
 }
 
 p {
