@@ -1,7 +1,7 @@
 <body class='about'>
 	<div class='about-wrap'></div>
 	<%= link_to image_tag('logo.png', class: 'about-logo'), root_path %>
-	<%= link_to image_tag('logo-insta.png', class: 'insta-logo'), "https://www.instagram.com/leehaeyoung1730/" %>
+	<%= link_to image_tag('logo-insta.png', class: 'insta-logo'), "https://www.instagram.com/leehaeyoung1730/", target: '_blank' %>
 	<div class='about-text'>
 		<%= simple_format(@about.content) %>
 	</div>
