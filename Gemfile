@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'masonry-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,7 +36,6 @@ gem 'rmagick'
 
 group :production do
   gem 'unicorn', '~> 5.1.0'
-  gem 'mysql2'
 end
 
 group :development, :test do

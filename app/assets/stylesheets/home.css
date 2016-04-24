@@ -1,3 +1,13 @@
+/*
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+*/
+
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
