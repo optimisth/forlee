@@ -252,4 +252,6 @@ a:active {
 	opacity: .3;
   -webkit-filter: brightness(2) contrast(2) grayscale(100%); /* Chrome, Safari, Opera */
   filter: brightness(2) contrast(2) grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
