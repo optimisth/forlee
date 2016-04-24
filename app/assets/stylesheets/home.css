@@ -217,11 +217,13 @@ ul {
 .post_detail_content {
 	font-size: 16px;
 	line-height: 28px;
+  white-space: pre-line;
 }
 
 .post_detail_content_kr {
 	font-size: 14px;
 	line-height: 26px;
+  white-space: pre-line;
 }
 
 a:hover {
