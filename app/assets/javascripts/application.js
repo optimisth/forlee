@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require masonry/masonry.min
+//= require masonry/jquery.imagesloaded.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
