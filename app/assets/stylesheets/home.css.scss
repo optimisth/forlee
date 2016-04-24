@@ -223,16 +223,17 @@ a:active {
 .grid-sizer,
 .grid-item {
   width: 33.333%;
-  padding: 0 5px 5px 0;
 }
 
 .grid-item {
   float: left;
+  padding: 0 5px 2px 0;
 }
 
 .grid-item figure {
   width: 100%;
   margin: 0;
+  padding: 0;
   display: inline-block;
   background: pink;
   /*background: #f9dce9;*/
