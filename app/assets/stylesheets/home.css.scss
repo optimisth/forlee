@@ -159,7 +159,8 @@ ul {
 	width: 100%;
 	margin: 0 0 5px 0;
 	display: inline-block;
-	background: #f9dce9;
+  background: pink;
+	/*background: #f9dce9;*/
 	font-size: 0px;
 }
 
@@ -172,8 +173,8 @@ ul {
 
 .column figure img:hover {
 	opacity: .3;
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
+  -webkit-filter: brightness(2) contrast(2) grayscale(100%); /* Chrome, Safari, Opera */
+  filter: brightness(2) contrast(2) grayscale(100%);
 }
 
 .post img {
