@@ -31,7 +31,7 @@
 		<div class='post_detail_contents'>
 			<div class='post_detail_content'><%= @post.content %></div>
 			<% unless @post.content_kr.blank? %>
-				<div class='post_detail_content_kr'><%= @post.content_kr %></div>
+				<div class='post_detail_content_kr', style="<%= 'margin-top: 20px;' unless @post.content.blank? %>"><%= @post.content_kr %></div>
 			<% end %>
 		</div>
 	</div>

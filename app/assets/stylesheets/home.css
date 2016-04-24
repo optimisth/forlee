@@ -218,12 +218,16 @@ ul {
 	font-size: 16px;
 	line-height: 28px;
   white-space: pre-line;
+	word-break: keep-all;
+	word-wrap: break-word;
 }
 
 .post_detail_content_kr {
 	font-size: 14px;
 	line-height: 26px;
   white-space: pre-line;
+	word-break: keep-all;
+	word-wrap: break-word;
 }
 
 a:hover {
