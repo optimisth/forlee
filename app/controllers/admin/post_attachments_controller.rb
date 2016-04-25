@@ -52,9 +52,10 @@ class Admin::PostAttachmentsController < ApplicationController
   # DELETE /post_attachments/1
   # DELETE /post_attachments/1.json
   def destroy
+    post = @post_attachment.post
     @post_attachment.destroy
     respond_to do |format|
-      format.json { head :no_content }
+      format.html { redirect_to admin_list_bulletin_post_path(post.bulletin.list, post.bulletin, post), notice: 'Post Attachment was successfully destroyed.' }
     end
   end
 
