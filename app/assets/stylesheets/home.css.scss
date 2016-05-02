@@ -240,8 +240,8 @@ a:active {
   margin: 0;
   padding: 0;
   display: inline-block;
-  background: pink;
-  /*background: #f9dce9;*/
+  /*background: pink*/
+  background: #f9dce9;
   font-size: 0px;
 }
 
@@ -254,8 +254,8 @@ a:active {
 
 .grid-item figure img:hover {
 	opacity: .3;
-  -webkit-filter: brightness(2) contrast(2) grayscale(100%); /* Chrome, Safari, Opera */
-  filter: brightness(2) contrast(2) grayscale(100%);
+  -webkit-filter: /*brightness(2) contrast(2)*/ grayscale(100%); /* Chrome, Safari, Opera */
+  filter: /*brightness(2) contrast(2)*/ grayscale(100%);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }

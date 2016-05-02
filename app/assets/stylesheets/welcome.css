@@ -25,7 +25,7 @@ html, body, #wrapper {
 }
 
 .choose-container, .choose {
-	color: rgb(25, 25, 25);
+	color: rgba(0,0,0,0.6);
 	font-size: 18px;
 }
 
@@ -87,7 +87,7 @@ html, body, #wrapper {
 	width: 25px;
 	position: absolute;
 	top: 60px;
-	left: 1090px;
+	left: 1150px;
 }
 
 p {
