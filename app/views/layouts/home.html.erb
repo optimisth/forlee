@@ -7,10 +7,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
 
   <div class='navigation'>
+    <div id='open-menu' class='open-menu'></div>
+    <div id='go-to-top' class='go-to-top'></div>
+
     <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
 
     <ul class='navigation-ul'>
@@ -34,4 +38,23 @@
   </div>
 
 </body>
+
+<script>
+$(document).ready(function(){
+  $("#open-menu").click(function(event) {
+
+    if($(".navigation-ul").is(':visible')) {
+      $(".navigation-ul").hide();
+    }
+    else {
+      $(".navigation-ul").show();
+    }
+  });
+
+  $("#go-to-top").click(function(event) {
+    $(".section").animate({ scrollTop: 0 }, "fast");
+  });
+});
+
+</script>
 </html>

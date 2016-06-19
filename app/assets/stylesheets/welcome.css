@@ -1,95 +1,195 @@
-html, body, #wrapper {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-family: 'Questrial', sans-serif;
+@media screen and (min-width: 750px) {
+	html, body, #wrapper {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-family: 'Questrial', sans-serif;
+	}
+
+	#wrapper td {
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.pink {
+		background-color: rgb(249, 220, 233);
+	}
+
+	.grey {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.logo {
+		height: 18px;
+	}
+
+	.choose-container, .choose {
+		color: rgba(0,0,0,0.6);
+		font-size: 18px;
+	}
+
+	.choose {
+		text-decoration: none;
+		margin: 0 38px;
+	}
+
+	.choose:hover {
+		text-decoration: none;
+		color: rgb(181, 148, 0);
+	}
+
+	.about {
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+
+	.about-wrap {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		background: rgba(255, 255, 255, 0.4);
+		z-index: -10;
+	}
+
+	.about-logo {
+		height: 15px;
+		margin-top: 75px;
+		margin-left: 90px;
+	}
+
+	.about-text {
+		width: 610px;
+		height: 320px;
+		white-space: pre-line;
+		margin-top: 90px;
+		margin-left: 580px;
+		font-size: 14px;
+		line-height: 26px;
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
+
+	.about-image {
+		position: absolute;
+		top: 150px;
+		left: 90px;
+	}
+
+	.about-image img {
+		width: 400px;
+	}
+
+	.insta-logo {
+		width: 25px;
+		position: absolute;
+		top: 60px;
+		left: 1150px;
+	}
+
+	p {
+		margin: 0;
+	}
 }
 
-#wrapper td {
-	vertical-align: middle;
-	text-align: center;
-}
+@media screen and (max-width: 750px) {
+	html, body, #wrapper {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-family: 'Questrial', sans-serif;
+	}
 
-.pink {
-	background-color: rgb(249, 220, 233);
-}
+	#wrapper td {
+		vertical-align: middle;
+		text-align: center;
+	}
 
-.grey {
-	background-color: rgba(0, 0, 0, 0.1);
-}
+	.pink {
+		background-color: rgb(249, 220, 233);
+	}
 
-.logo {
-	height: 18px;
-}
+	.grey {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
 
-.choose-container, .choose {
-	color: rgba(0,0,0,0.6);
-	font-size: 18px;
-}
+	.logo {
+		height: 10.7px;
+	}
 
-.choose {
-	text-decoration: none;
-	margin: 0 38px;
-}
+	.choose-container, .choose {
+		color: rgba(0,0,0,0.6);
+		font-size: 18px;
+	}
 
-.choose:hover {
-	text-decoration: none;
-	color: rgb(181, 148, 0);
-}
+	.choose {
+		text-decoration: none;
+		margin: 0 38px;
+	}
 
-.about {
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-}
+	.choose:hover {
+		text-decoration: none;
+		color: rgb(181, 148, 0);
+	}
 
-.about-wrap {
-	width: 100%;
-	height: 100%;
-	top: 0;
-	bottom: 0;
-	position: absolute;
-	background: rgba(255, 255, 255, 0.4);
-	z-index: -10;
-}
+	.about {
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
 
-.about-logo {
-	height: 15px;
-	margin-top: 75px;
-	margin-left: 90px;
-}
+	.about-wrap {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		background: rgba(255, 255, 255, 0.4);
+		z-index: -10;
+	}
 
-.about-text {
-	width: 610px;
-	height: 320px;
-	white-space: pre-line;
-	margin-top: 90px;
-	margin-left: 580px;
-	font-size: 14px;
-	line-height: 26px;
-	word-break: keep-all;
-	word-wrap: break-word;
-}
+	.about-logo {
+		height: 15px;
+		margin-top: 75px;
+		margin-left: 90px;
+	}
 
-.about-image {
-	position: absolute;
-	top: 150px;
-	left: 90px;
-}
+	.about-text {
+		width: 610px;
+		height: 320px;
+		white-space: pre-line;
+		margin-top: 90px;
+		margin-left: 580px;
+		font-size: 14px;
+		line-height: 26px;
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
 
-.about-image img {
-	width: 400px;
-}
+	.about-image {
+		position: absolute;
+		top: 150px;
+		left: 90px;
+	}
 
-.insta-logo {
-	width: 25px;
-	position: absolute;
-	top: 60px;
-	left: 1150px;
-}
+	.about-image img {
+		width: 400px;
+	}
 
-p {
-	margin: 0;
+	.insta-logo {
+		width: 25px;
+		position: absolute;
+		top: 60px;
+		left: 1150px;
+	}
+
+	p {
+		margin: 0;
+	}
 }
