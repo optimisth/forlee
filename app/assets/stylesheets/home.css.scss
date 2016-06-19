@@ -296,7 +296,7 @@
     width: 100%;
     height: 100% !important;
     height: auto;
-    padding: 0 30px;
+    padding: 0 30px 30px 30px;
     overflow-y: scroll;
     float: left;
   }
@@ -367,7 +367,6 @@
 
   .post_detail_titles {
     line-height: 20px;
-    height: 20px;
   }
 
   .post_detail_title {
