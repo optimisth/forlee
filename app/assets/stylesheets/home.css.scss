@@ -265,6 +265,13 @@
   .open-menu, .go-to-top {
     display: none;
   }
+
+  .slider {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -505,7 +512,13 @@
   iframe {
     width: 100%;
     height: auto;
-    overflow: scroll;
-    -webkit-overflow-scrolling:touch;
+    overflow: hidden;
+  }
+  .slider {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    min-height: 380px;
   }
 }
