@@ -8,7 +8,7 @@
 		<% unless post.post_attachments.blank? %>
 		<div>
 				<a href='<%=home_post_path(post)%>'>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
+						<%= image_tag(post.post_attachments.first.avatar_url, id: "p#{index}") %>
 				</a>
 			</div>
 		<% end %>
@@ -23,7 +23,8 @@ $(".slider").slick({
 		infinite: true,
 		autoplay: true,
 		fade: true,
-		autoplayspeed: 700
+		autoplayspeed: 700,
+		lazyload: true
 });
 });
 </script>
