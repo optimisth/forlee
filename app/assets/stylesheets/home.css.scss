@@ -361,54 +361,55 @@
   }
 
   .post_detail {
-    padding: 40px 20px;
+    padding: 25px 0px;
     color: rgba(0, 0, 0, 0.6)
   }
 
   .post_detail_titles {
-    line-height: 20px;
+    line-height: 17px;
   }
 
   .post_detail_title {
-    font-size: 20px;
+    font-size: 14px;
     display: inline-block;
   }
 
   .post_detail_title_kr {
-    font-size: 18px;
+    font-size: 15px;
     display: inline-block;
   }
 
   .post_detail_descs {
-    margin-top: 8px;
-    line-height: 13px;
+    margin-top: 3px;
+    line-height: 10.8px;
   }
 
   .post_detail_desc {
-    font-size: 13px;
+    font-size: 9px;
     display: inline-block;
   }
 
   .post_detail_desc_kr {
-    font-size: 12px;
+    font-size: 10px;
     display: inline-block;
   }
 
   .post_detail_contents {
-    margin-top: 32px;
+    margin-top: 11.1px;
+    letter-spacing: -0.2px;
   }
 
   .post_detail_content {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 10px;
+    line-height: 24px;
     white-space: pre-line;
     word-break: keep-all;
     word-wrap: break-word;
   }
 
   .post_detail_content_kr {
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 11px;
+    line-height: 25px;
     white-space: pre-line;
     word-break: keep-all;
     word-wrap: break-word;
