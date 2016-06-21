@@ -4,7 +4,7 @@
 	<% end %>
 
 	<% @videos.each do |v| %>
-		<iframe src="<%= v.video_url %>" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe src="<%= v.video_url %>" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen scrolling="yes"></iframe>
 	<% end %>
 
 	<div class='post_detail'>
