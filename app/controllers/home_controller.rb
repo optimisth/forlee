@@ -38,7 +38,7 @@ class HomeController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order("RANDOM()")
+    @posts = Post.where("id is not 48").order("RANDOM()")
     render 'random'
   end
 end
