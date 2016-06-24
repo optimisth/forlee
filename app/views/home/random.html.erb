@@ -9,7 +9,7 @@
 		<% unless post.post_attachments.blank? %>
 			<div>
 				<a href='<%=home_post_path(post)%>'>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p0") %>
+						<%= image_tag(post.post_attachments.first.avatar.thumb_large.url, id: "p0") %>
 				</a>
 			</div>
 		<% end %>
@@ -18,7 +18,7 @@
 		<% unless post.post_attachments.blank? %>
 			<div>
 				<a href='<%=home_post_path(post)%>'>
-						<img data-lazy="<%= image_url(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'))%>" id="p<%=index+1%>">
+						<img data-lazy="<%= image_url(post.post_attachments.first.avatar.thumb_large.url)%>" id="p<%=index+1%>">
 				</a>
 			</div>
 		<% end %>
