@@ -6,9 +6,13 @@
 <div class='slider'>
 	<% @posts.each_with_index do |post, index| %>
 		<% unless post.post_attachments.blank? %>
-		<div>
+			<div>
 				<a href='<%=home_post_path(post)%>'>
+					<% if index == 0 %>
 						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
+					<% else %>
+						<img data-lazy="<%= image_url(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'))%>" id="p<%=index%>">
+					<% end %>
 				</a>
 			</div>
 		<% end %>
@@ -24,7 +28,8 @@ $(".slider").slick({
 		autoplay: true,
 		fade: true,
 		autoplayspeed: 700,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		lazyLoad: 'ondemand',
 });
 });
 </script>
