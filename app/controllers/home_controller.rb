@@ -1,6 +1,4 @@
 class HomeController < ApplicationController
-  def index
-  end
 
   def list
     @list = List.find_by("title=?", params[:title])
@@ -40,5 +38,9 @@ class HomeController < ApplicationController
   def index
     @posts = Post.where("id is not 48").order("RANDOM()")
     render 'random'
+  end
+
+  def about
+    @about = About.order('created_at DESC').first
   end
 end

@@ -273,6 +273,20 @@
     }
   }
 
+  .insta-logo {
+    width: 25px;
+  }
+
+  .about-text {
+    width: 800px;
+    white-space: pre-line;
+    font-size: 14px;
+    line-height: 26px;
+    color: #7d7c7d;
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -312,6 +326,7 @@
 
   .navigation-ul {
     width: 130px;
+    height: 100%;
     padding: 25px 30px 0 5px;
     position: fixed;
     display: none;
@@ -537,5 +552,22 @@
       width: 17px;
       height: 30px;
     }
+  }
+
+  .about-wrap {
+    padding: 0 42px;
+  }
+
+  .about-text {
+    white-space: pre-line;
+    font-size: 9px;
+	  line-height: 1.4;
+	  color: #7d7c7d;
+    		word-break: keep-all;
+    		word-wrap: break-word;
+  }
+
+  .insta-logo {
+    width: 18px;
   }
 }

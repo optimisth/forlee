@@ -18,7 +18,7 @@
     <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
 
     <ul class='navigation-ul'>
-      <li class='list_title' id="about"><%= link_to 'About', welcome_about_path %></li>
+      <li class='list_title' id="about"><%= link_to 'About', home_about_path %></li>
       <% List.all.each do |list| %>
         <li class='list_title' id="l<%=list.id%>"><%= link_to list.title, home_list_path(list.title) %></li>
         <ul>
@@ -27,6 +27,7 @@
           <% end %>
         </ul>
       <% end %>
+      <%= link_to image_tag('logo-insta.png', class: 'insta-logo'), "https://www.instagram.com/leehaeyoung1730/", target: '_blank' %>
     </ul>
   </div>
 
