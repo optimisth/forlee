@@ -12,12 +12,13 @@
 <body>
 
   <div class='navigation'>
-    <div id='open-menu' class='open-menu'></div>
-    <div id='go-to-top' class='go-to-top'></div>
+    <%= image_tag 'menu.png', id: 'open-menu', class: 'open-menu' %>
+    <%= image_tag 'go_to_top.png', id: 'go-to-top', class: 'go-to-top' %>
 
     <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
 
     <ul class='navigation-ul'>
+      <li class='list_title' id="about"><%= link_to 'About', welcome_about_path %></li>
       <% List.all.each do |list| %>
         <li class='list_title' id="l<%=list.id%>"><%= link_to list.title, home_list_path(list.title) %></li>
         <ul>
