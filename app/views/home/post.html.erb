@@ -26,22 +26,30 @@
 				</div>
 			<% end %>
 		</div>
+		<% unless @post.description.blank? && @post.description_kr.blank? %>
 		<div class='post_detail_descs'>
+			<% unless @post.description.blank? %>
 			<div class='post_detail_desc'>
 				<%= @post.description %>
 			</div>
+			<% end %>
 			<% unless @post.description_kr.blank? %>
 				<div class='post_detail_desc_kr'>
 					<%= "/ #{@post.description_kr}" %>
 				</div>
 			<% end %>
 		</div>
-		<div class='post_detail_contents'>
-			<div class='post_detail_content'><%= @post.content %></div>
-			<% unless @post.content_kr.blank? %>
-				<div class='post_detail_content_kr', style="<%= 'margin-top: 20px;' unless @post.content.blank? %>"><%= @post.content_kr %></div>
-			<% end %>
-		</div>
+		<% end %>
+		<% unless @post.content.blank? && @post.content_kr.blank? %>
+			<div class='post_detail_contents'>
+				<% unless @post.content.blank? %>
+				<div class='post_detail_content'><%= @post.content %></div>
+				<% end %>
+				<% unless @post.content_kr.blank? %>
+					<div class='post_detail_content_kr', style="<%= 'margin-top: 20px;' unless @post.content.blank? %>"><%= @post.content_kr %></div>
+				<% end %>
+			</div>
+		<% end %>
 	</div>
 </div>
 
