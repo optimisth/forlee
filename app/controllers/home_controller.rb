@@ -33,6 +33,8 @@ class HomeController < ApplicationController
     @videos = @post.videos
     @selected = "b#{@post.bulletin.id}"
 
+    @post_prev_id = Post.where("id > ?", @post.id).order("id ASC").first || Post.first
+    @post_next_id = Post.where("id < ?", @post.id).order("id DESC").first || Post.last
   end
 
   def index

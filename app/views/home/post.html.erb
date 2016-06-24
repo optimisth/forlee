@@ -1,4 +1,12 @@
 <div class='post'>
+	<div class='post-arrows'>
+		<a href='<%=home_post_path(@post_prev_id)%>'>
+			<%= image_tag 'arrow_left.png', class: 'arrow-left' %>
+		</a>
+		<a href='<%=home_post_path(@post_next_id)%>'>
+			<%= image_tag 'arrow_right.png', class: 'arrow-right' %>
+		</a>
+	</div>
 	<% @pictures.each do |p| %>
 		<%= image_tag p.avatar_url %>
 	<% end %>
@@ -42,4 +50,11 @@ $(document).ready(function () {
 	var selected_menu = $("#b<%= @post.bulletin.id %>");
 	selected_menu.addClass('nav-active');
 })
+
+function goPrev() {
+
+}
+
+function goNext() {
+}
 </script>

@@ -262,7 +262,7 @@
     transition: .3s ease-in-out;
   }
 
-  .open-menu, .go-to-top {
+  .open-menu, .go-to-top, .post-arrows {
     display: none;
   }
 
@@ -272,6 +272,7 @@
       height: auto;
     }
   }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -516,6 +517,25 @@
     img {
       width: 100%;
       height: auto;
+    }
+  }
+
+  .post-arrows {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    .arrow-left {
+      float: left;
+      margin-left: 6px;
+      width: 17px;
+      height: 30px;
+    }
+    .arrow-right {
+      float: right;
+      margin-right: 6px;
+      width: 17px;
+      height: 30px;
     }
   }
 }
