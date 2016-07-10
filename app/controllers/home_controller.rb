@@ -11,6 +11,8 @@ class HomeController < ApplicationController
     @posts = Post.where(id: post_ids)
     @selected = "l#{@list.id}"
 
+    @is_random = false
+
     render 'index'
   end
 
@@ -22,6 +24,7 @@ class HomeController < ApplicationController
     @pictures = PostAttachment.where(post_id: post_ids)
     @selected = "b#{@bulletin.id}"
 
+    @is_random = false
     render 'index'
   end
 
@@ -33,14 +36,19 @@ class HomeController < ApplicationController
 
     @post_next_id = @post.next_id
     @post_prev_id = @post.prev_id
+
+    @is_random = false
   end
 
   def index
     @posts = Post.where("id is not 48").order("RANDOM()")
+    @is_random = true
     render 'random'
   end
 
   def about
     @about = About.order('created_at DESC').first
+
+    @is_random = false
   end
 end
