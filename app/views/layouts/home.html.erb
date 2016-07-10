@@ -31,7 +31,7 @@
     </ul>
   </div>
 
-  <div class='section <% "section-random" if @is_random %>'>
+  <div class='section <% "section-random" if @is_random == true %>'>
     <%= yield %>
 
     <div class='footer'>
