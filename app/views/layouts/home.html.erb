@@ -31,11 +31,13 @@
     </ul>
   </div>
 
-  <div class="section <%= 'section-random' if @is_random == true %>">
-    <%= yield %>
+  <div class='section-wrap'>
+    <div class="section <%= 'section-random' if @is_random == true %>">
+      <%= yield %>
 
-    <div class='footer'>
-      All rights reserved © LEEHAEYOUNG
+      <div class='footer'>
+        All rights reserved © LEEHAEYOUNG
+      </div>
     </div>
   </div>
 
