@@ -578,7 +578,11 @@
   }
 
   .about-wrap {
-    padding: 0 42px;
+    width: 231px;
+    margin: 0 auto;
+    img {
+      width: 231px;
+    }
   }
 
   .about-text {
