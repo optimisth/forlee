@@ -285,14 +285,25 @@
     width: 25px;
   }
 
+  .about-wrap {
+    overflow: hidden;
+    margin-top: 90px;
+    img {
+      width: 340px;
+      float: left;
+    }
+  }
+
   .about-text {
-    width: 800px;
+    width: 350px;
     white-space: pre-line;
     font-size: 14px;
     line-height: 26px;
     color: #7d7c7d;
     word-break: keep-all;
     word-wrap: break-word;
+    float: left;
+    margin-left: 50px;
   }
 
 }
