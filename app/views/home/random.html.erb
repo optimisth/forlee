@@ -8,7 +8,7 @@
 	<% unless post.blank? %>
 		<% unless post.post_attachments.blank? %>
 			<div>
-				<a href='<%=home_post_path(post)%>'>
+				<a href='<%=home_post_path(post.bulletin.list.title, post.bulletin.title, post)%>'>
 						<%= image_tag(post.post_attachments.first.avatar.thumb_large.url, id: "p0") %>
 				</a>
 			</div>
