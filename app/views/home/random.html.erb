@@ -4,7 +4,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
 <div class='slider'>
-	<% post = Post.where(id: 48).first %>
+	<% post = Post.where(id: 133).first %>
 	<% unless post.blank? %>
 		<% unless post.post_attachments.blank? %>
 			<div>
@@ -17,7 +17,7 @@
 	<% @posts.each_with_index do |post, index| %>
 		<% unless post.post_attachments.blank? %>
 			<div>
-				<a href='<%=home_post_path(post)%>'>
+				<a href='<%=home_post_path(post.bulletin.list.title, post.bulletin.title, post)%>'>
 						<img data-lazy="<%= image_url(post.post_attachments.first.avatar.thumb_large.url)%>" id="p<%=index+1%>">
 				</a>
 			</div>

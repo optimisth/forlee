@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/list/:title' => 'home#list', :as => 'home_list'
-  get 'home/bulletin/:title' => 'home#bulletin', :as => 'home_bulletin'
-  get 'home/post/:id' => 'home#post', :as => 'home_post'
-  get 'home/index'
+  get 'home/:list_title' => 'home#list', :as => 'home_list'
+  get 'home/:list_title/:bulletin_title' => 'home#bulletin', :as => 'home_bulletin'
+  get 'home/:list_title/:bulletin_title/:id' => 'home#post', :as => 'home_post'
+  get 'home' => 'home#index', :as => 'home_index'
 
   root 'welcome#index'
-  get 'home/about'
-  get 'home/index'
+  get 'about' => 'home#about', :as => 'home_about'
 
 
   get 'admin' => 'admin/lists#index'

@@ -1,9 +1,9 @@
 <div class='post'>
 	<div class='post-arrows'>
-		<a href='<%=home_post_path(@post_prev_id)%>'>
+		<a href='<%=home_post_path(@post_prev.bulletin.list.title, @post_prev.bulletin.title, @post_prev.id)%>'>
 			<%= image_tag 'arrow_left.png', class: 'arrow-left' %>
 		</a>
-		<a href='<%=home_post_path(@post_next_id)%>'>
+		<a href='<%=home_post_path(@post_next.bulletin.list.title, @post_next.bulletin.title, @post_next.id)%>'>
 			<%= image_tag 'arrow_right.png', class: 'arrow-right' %>
 		</a>
 	</div>

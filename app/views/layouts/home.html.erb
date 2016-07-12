@@ -23,7 +23,7 @@
         <li class='list_title' id="l<%=list.id%>"><%= link_to list.title, home_list_path(list.title) %></li>
         <ul>
           <% list.bulletins.each do |bulletin| %>
-            <li class='bulletin_title' id="b<%=bulletin.id%>"><%= link_to bulletin.title, home_bulletin_path(bulletin.title) %></li>
+            <li class='bulletin_title' id="b<%=bulletin.id%>"><%= link_to bulletin.title, home_bulletin_path(list.title, bulletin.title) %></li>
           <% end %>
         </ul>
       <% end %>

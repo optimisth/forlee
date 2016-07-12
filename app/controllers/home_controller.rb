@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def list
-    @list = List.find_by("title=?", params[:title])
+    @list = List.find_by("title=?", params[:list_title])
     @bulletins = @list.bulletins
     post_ids = []
     @bulletins.each do |b|
@@ -17,8 +17,8 @@ class HomeController < ApplicationController
   end
 
   def bulletin
-    @bulletin = Bulletin.find_by("title=?", params[:title])
-    @list = @bulletin.list
+    @list = List.find_by("title=?", params[:list_title])
+    @bulletin = @list.bulletins.find_by("title=?", params[:bulletin_title])
     @posts = @bulletin.posts
     post_ids = @posts.map(&:id)
     @pictures = PostAttachment.where(post_id: post_ids)
@@ -29,13 +29,15 @@ class HomeController < ApplicationController
   end
 
   def post
-    @post = Post.find(params[:id])
+    @list = List.find_by("title=?", params[:list_title])
+    @bulletin = @list.bulletins.find_by("title=?", params[:bulletin_title])
+    @post = @bulletin.posts.find(params[:id])
     @pictures = @post.post_attachments
     @videos = @post.videos
     @selected = "b#{@post.bulletin.id}"
 
-    @post_next_id = @post.next_id
-    @post_prev_id = @post.prev_id
+    @post_next = @post.next
+    @post_prev = @post.prev
 
     @is_random = false
   end
