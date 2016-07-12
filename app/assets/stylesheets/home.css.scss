@@ -79,6 +79,7 @@
   .section-wrap {
     height: 100% !important;
     overflow-y: scroll;
+    position: relative;
   }
 
   .section {
@@ -91,6 +92,10 @@
 
   .section-random {
     width: 600px !important;
+    min-height: 100%;
+    .slider {
+      min-height: 100%;
+    }
   }
 
   .logo {
@@ -332,11 +337,22 @@
     background-color: #ffffff;
   }
 
+  .section-wrap {
+    min-height: 100%;
+    position: relative;
+  }
+
   .section {
     width: 100%;
     min-height: 100%;
     padding: 76px 30px 73px 30px;
-    position: relative;
+  }
+
+  .section-random {
+    min-height: 100%;
+    .slider {
+      min-height: 100%;
+    }
   }
 
   .logo {
