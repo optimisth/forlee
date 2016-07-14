@@ -73,6 +73,6 @@ class Admin::BulletinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bulletin_params
-      params.require(:bulletin).permit(:list_id, :title, :description)
+      params.require(:bulletin).permit(:list_id, :title, :description, :no_show)
     end
 end

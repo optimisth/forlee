@@ -55,7 +55,11 @@
 
 <script>
 $(document).ready(function () {
-	var selected_menu = $("#b<%= @post.bulletin.id %>");
+	<% unless @post.bulletin.no_show == true %>
+		var selected_menu = $("#b<%= @post.bulletin.id %>");
+	<% else %>
+		var selected_menu = $("#l<%= @post.bulletin.list.id %>");
+	<% end %>
 	selected_menu.addClass('nav-active');
 })
 
