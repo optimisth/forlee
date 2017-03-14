@@ -15,6 +15,9 @@
 
 <script>
 
+var touchedImg;
+var isTouched = false;
+
 $(document).ready(function () {
 	var selected_menu = $("#<%= @selected %>");
 	selected_menu.addClass('nav-active');
@@ -30,19 +33,28 @@ $(document).ready(function () {
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry();
     $('.fig-img').on('touchstart click', function (e) {
+        console.log("touched!");
           var link = $(this); //preselect the link
           if (link.hasClass('touched')) {
               return true;
           } else {
-            $('.fig-img').all.removeClass('touched');
+            if(isTouched == true) {
+              touchedImg.removeClass('touched');
+              isTouched = false;
+            }
 
               link.addClass('touched');
-              e.preventDefault();
-              return false;
+              touchedImg = link;
+              isTouched = true;
+              //e.preventDefault();
+              return true;
           }
       });
-      $('.fig-img').on('touchend touchmove touchenter touchleave', function (e) {
-        $('.fig-img').all.removeClass('touched');
+      $('html').on('touchend', function (e) {
+        if(isTouched == true) {
+          touchedImg.removeClass('touched');
+          isTouched = false;
+        }
       });
 	});
 
