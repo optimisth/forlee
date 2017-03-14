@@ -56,6 +56,13 @@ $(document).ready(function () {
           isTouched = false;
         }
       });
+      $( ".fig-img" ).hover(
+        function() {
+          $( this ).addClass("touched");
+        }, function() {
+          $( this ).removeClass("touched");
+        }
+      );
 	});
 
 
