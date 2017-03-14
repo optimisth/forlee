@@ -49,11 +49,11 @@
 $(document).ready(function(){
   $("#open-menu").click(function(event) {
 
-    if($(".navigation-ul").is(':visible')) {
-      $(".navigation-ul").hide();
+    if($(".navigation-ul").hasClass('opened')) {
+      $(".navigation-ul").removeClass('opened')
     }
     else {
-      $(".navigation-ul").show();
+      $(".navigation-ul").addClass('opened after-first-time');
     }
   });
 
