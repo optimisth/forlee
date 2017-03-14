@@ -247,7 +247,7 @@
 
   .grid-item {
     float: left;
-    padding: 0 5px 2px 0;
+    padding: 0 5px 5px 0;
   }
 
   .grid-item a {
@@ -267,6 +267,7 @@
   .grid-item figure img {
     width: 100%;
     opacity: 1;
+    display: block;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
   }
@@ -519,7 +520,7 @@
 
   .grid-item {
     float: left;
-    padding: 0 5px 5px 0;
+    padding: 0 5px 2px 0;
   }
 
   .grid-item a {
