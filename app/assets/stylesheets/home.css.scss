@@ -242,12 +242,13 @@
 
   .grid-sizer,
   .grid-item {
-    width: 33.333%;
+    width: calc(33% - 2.5px);
   }
 
   .grid-item {
     float: left;
-    padding: 0 5px 5px 0;
+    //padding: 0 5px 5px 0;
+    margin-bottom: 5px;
     font-size: 0;
   }
 
@@ -517,12 +518,13 @@
 
   .grid-sizer,
   .grid-item {
-    width: 33.333%;
+    width: calc(33% - 2.5px);
   }
 
   .grid-item {
     float: left;
-    padding: 0 5px 5px 0;
+    //padding: 0 5px 5px 0;
+    margin-bottom: 5px;
     font-size: 0;
   }
 

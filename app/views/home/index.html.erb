@@ -22,7 +22,8 @@ $(document).ready(function () {
 	  itemSelector: '.grid-item',
 	  percentPosition: true,
 	  columnWidth: '.grid-sizer',
-    transitionDuration: 0
+    transitionDuration: 0,
+    gutter: 5
 	});
 	// layout Isotope after each image loads
 	$grid.imagesLoaded().progress( function() {
