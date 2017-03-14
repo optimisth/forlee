@@ -5,7 +5,8 @@
 			<div class="grid-item">
 				<a href='<%=home_post_path(post.bulletin.list.title, post.bulletin.title, post)%>'>
 					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}", class: 'fig-img') %>
+						<%= image_tag(post.post_attachments.first.avatar.thumb_large, id: "p#{index}", class: 'fig-img od') %>
+            <%= image_tag(post.post_attachments.first.avatar.thumb, id: "p#{index}", class: 'fig-img om') %>
 					</figure>
 				</a>
 			</div>

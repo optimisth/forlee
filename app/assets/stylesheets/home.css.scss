@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 770px) {
   .om {
-    display: none;
+    display: none !important;
   }
 
   html, body, #wrapper {
@@ -326,7 +326,7 @@
 
 @media screen and (max-width: 770px) {
   .od {
-    display: none;
+    display: none !important;
   }
 
   html, body, #wrapper {
