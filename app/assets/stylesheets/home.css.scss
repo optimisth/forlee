@@ -248,10 +248,12 @@
   .grid-item {
     float: left;
     padding: 0 5px 5px 0;
+    font-size: 0;
   }
 
   .grid-item a {
     font-size: 0;
+    display: block;
   }
 
   .grid-item figure {
@@ -520,7 +522,8 @@
 
   .grid-item {
     float: left;
-    padding: 0 5px 2px 0;
+    padding: 0 5px 5px 0;
+    font-size: 0;
   }
 
   .grid-item a {
