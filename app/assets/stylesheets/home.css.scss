@@ -207,7 +207,7 @@
     word-wrap: break-word;
   }
 
-  a:hover {
+  a:hover, a:focus {
     color: rgb(181, 148, 0);
   }
 
@@ -257,6 +257,7 @@
   .grid-item a {
     font-size: 0;
     display: block;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .grid-item figure {
@@ -277,7 +278,7 @@
     transition: .3s ease-in-out;
   }
 
-  .grid-item figure img:hover {
+  .grid-item figure img:hover, .grid-tiem figure img.touched {
     opacity: .3;
     -webkit-filter: /*brightness(2) contrast(2)*/ grayscale(100%); /* Chrome, Safari, Opera */
     filter: /*brightness(2) contrast(2)*/ grayscale(100%);
@@ -482,7 +483,7 @@
     word-wrap: break-word;
   }
 
-  a:hover {
+  a:hover, a:focus {
     color: rgb(181, 148, 0);
   }
 
@@ -534,6 +535,7 @@
   .grid-item a {
     font-size: 0;
     display: block;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .grid-item figure {
@@ -554,7 +556,7 @@
     display: block;
   }
 
-  .grid-item figure img:hover {
+  .grid-item figure img:hover, .grid-tiem figure img.touched {
     opacity: .3;
     -webkit-filter: /*brightness(2) contrast(2)*/ grayscale(100%); /* Chrome, Safari, Opera */
     filter: /*brightness(2) contrast(2)*/ grayscale(100%);

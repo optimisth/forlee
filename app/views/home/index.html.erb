@@ -5,7 +5,7 @@
 			<div class="grid-item">
 				<a href='<%=home_post_path(post.bulletin.list.title, post.bulletin.title, post)%>'>
 					<figure>
-						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}") %>
+						<%= image_tag(post.post_attachments.first.avatar_url.gsub('images/', 'images/thumb_'), id: "p#{index}", class: 'fig-img') %>
 					</figure>
 				</a>
 			</div>
@@ -14,6 +14,7 @@
 </div>
 
 <script>
+
 $(document).ready(function () {
 	var selected_menu = $("#<%= @selected %>");
 	selected_menu.addClass('nav-active');
@@ -28,6 +29,21 @@ $(document).ready(function () {
 	// layout Isotope after each image loads
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry();
+    $('.fig-img').on('touchstart click', function (e) {
+          var link = $(this); //preselect the link
+          if (link.hasClass('touched')) {
+              return true;
+          } else {
+            $('.fig-img').all.removeClass('touched');
+
+              link.addClass('touched');
+              e.preventDefault();
+              return false;
+          }
+      });
+      $('.fig-img').on('touchend touchmove touchenter touchleave', function (e) {
+        $('.fig-img').all.removeClass('touched');
+      });
 	});
 
 
