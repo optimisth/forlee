@@ -8,7 +8,10 @@
 		</a>
 	</div>
 	<% @pictures.each do |p| %>
-		<%= image_tag p.avatar_url %>
+		<%= link_to p.avatar_url, target: '_blank' do %>
+		<%= image_tag p.avatar.thumb_xlarge, class: 'od' %>
+		<%= image_tag p.avatar.thumb_large, class: 'om' %>
+		<% end %>
 	<% end %>
 
 	<% @videos.each do |v| %>

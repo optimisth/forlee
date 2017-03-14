@@ -53,6 +53,9 @@
 }
 
 @media screen and (min-width: 770px) {
+  .om {
+    display: none;
+  }
 
   html, body, #wrapper {
     height: 100%;
@@ -82,7 +85,9 @@
   }
 
   .section {
-    width: 800px;
+    width: 100%;
+    padding-right: 90px;
+    min-width: 800px;
     height: 100% !important;
     height: auto;
     padding-top: 70px;
@@ -313,6 +318,9 @@
 }
 
 @media screen and (max-width: 770px) {
+  .od {
+    display: none;
+  }
 
   html, body, #wrapper {
     width: 100%;
