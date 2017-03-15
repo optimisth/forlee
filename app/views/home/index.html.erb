@@ -34,7 +34,6 @@ $(document).ready(function () {
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry();
     $('.fig-img').on('touchstart click', function (e) {
-        console.log("touched!");
           var link = $(this); //preselect the link
           if (link.hasClass('touched')) {
               return true;
